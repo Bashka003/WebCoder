@@ -1,0 +1,394 @@
+@import "bourbon"
+@import "vars.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+//@import "app/libs/bootstrap/bootstrap.sass"*//
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+
+
+
+.header__logo
+	text-align: center
+
+.header__background
+    height: 505px
+    background-image: url('../assets/img/Shape 1.png')
+    background-repeat: no-repeat
+    padding-top: 20px
+    margin-top: 10px
+    
+.header--regform
+    height: 466px
+    width: 71%
+    margin: 0px auto
+    background-color: #f8f8f8
+    font-size: 14px
+    
+    &__slider
+        position: relative
+        float: left
+        width: 50%
+        overflow: hidden
+        &__slide
+            float: left
+            img 
+                width: 100%
+    &__searcform
+        width: 50%
+        float: left
+        h1
+            text-align: center
+            background: -webkit-linear-gradient(#fff, #ff8210)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+        &__gender
+            display: flex
+            align-items: center
+            span    
+                margin-right: 15px
+                margin-left: 10px
+            input  
+                display: none
+            label
+                display: block
+                width: 95px
+                height: 36px
+                background-image: url('../assets/img/gender_selector.png')
+                &[for="gender"]
+                    margin-left: 67px
+                    margin-right: 10px
+            input:checked + label
+                background-image: url('../assets/img/gender_selector1.png')    
+                  
+        p 
+            float: left
+            margin-left: 20px
+        &__name
+            p
+                margin-right: 55px 
+                margin-top: 14px
+            input  
+                margin-top: 6px
+                width: 315px
+                height: 36px
+                border-radius: 17px
+            &:after
+                content: ""
+                display: block
+                clear: both
+        &__age
+            p   
+                margin-right: 69px
+                margin-top: 14px
+
+            select  
+                height: 36px
+                border-radius: 17px
+                margin-top: 6px
+                margin-right: 20px
+                padding: 0 13px   
+            &:after
+                content: ""
+                display: block
+                clear: both
+        &__city
+            p   
+                margin-right: 69px
+                margin-top: 14px
+            select  
+                height: 36px
+                width: 315px
+                border-radius: 17px
+                margin-top: 6px
+                margin-right: 20px
+                padding: 0 10px   
+            &:after
+                content: ""
+                display: block
+                clear: both
+        &__button
+            a
+                display: block
+                margin: 30px auto
+                background-image: url('../assets/img/btn.png')
+                width: 320px
+                height: 71px
+        &__checkpoint
+            width: 240px
+            margin: 0 auto
+            box-sizing: border-box
+            margin-top: 0
+            &__checkbox,
+            &__checkbox1
+                width: 50%
+                float: left
+                p  
+                    display: block
+                    float: left
+                    margin-left: 14px
+                input  
+                    display: none
+                label
+                    margin-right: 15px
+                    margin-top: 4px
+                    display: block
+                    float: left
+                    width: 14px
+                    height: 14px
+                    border: 1px solid #cdcdcd
+                    &[for="input2"],
+                    &[for="input4"]
+                        border-radius: 50%
+                input:checked + label
+                    width: 14px
+                    height: 14px
+                    background-color: #ff9912
+                    border: 1px solid #cdcdcd
+                    background-size: 10px 
+
+            &:after
+                content: ""
+                display: block
+                clear: both
+            &__checkbox1
+                padding-left: 50px
+section
+    width: 71%
+    margin: 0 auto
+.information-block
+    &__code
+        float: left
+        width: 50%
+        text-align: justify
+        p 
+            font-size: 14px
+        img
+            -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%)
+            shape-outside: circle(50%)
+            float: left
+            padding-right: 20px
+    &__list
+        float: left
+        padding-left: 49px
+        width: 50%
+        &__slider
+            &__slide
+                position: relative
+                .owerlay
+                    padding-left: 10px
+                    display: none
+                    position: absolute
+                    background-color: rgba(0, 0, 0, 0.5)
+                    top: 0
+                    left: 0
+                    width: 70px
+                    height: 100%
+                    img 
+                        padding-left: 5px
+                        margin-top: -15px
+                        height: 25%
+                    p 
+                        display: block
+                        color: white
+                        font-size: 14px
+                        width: 100%
+                &:hover > .owerlay
+                    display: flex
+                    flex-wrap: wrap  
+        ul  
+            margin-top: 30px
+            li  
+                border-radius: 20px
+        .tab-content
+            
+            #panel1.tab-pane.fade.in.active
+                border-radius: 20px
+                .bars
+                    width: 60%
+                    float: left
+                    .progress
+                        margin-top: 25px
+                        .progress-bar
+                            background-color: #ff9615
+                            background-image: none
+                    #slider
+                        margin-top: 25px    
+                    #slider > div > div.noUi-connect    
+                        background-color: #ff9615
+                    .steps
+                        margin-top: 25px
+                        input
+                            display: none   
+		            
+                        label 
+                            display: block
+                            padding: 10px 10px 10px 15px
+                            float: left
+                            background-color: #c6c8c9
+                            position: relative
+                            height: 27px
+                            font-size: 9px
+                            line-height: 1
+                            border-radius: 4px 0 0 4px
+                        label:after,
+                        label:before 
+                            content: ''
+                            width: 0
+                            height: 0
+                            display: block
+                            position: absolute
+                            top: 0
+                            left: 85%
+                            border-top: 14px solid transparent
+                            border-left-width: 20px
+                            border-left-style: solid
+                            border-left-color: #c6c8c9
+                            border-bottom: 14px solid transparent
+                            z-index: 1
+                        label:before 
+                            left: calc(85% + 1px)
+                            border-left-color: #000
+                    
+                        label:last-child:after
+                        label:last-child:before 
+                            border: none
+                    
+                        label:last-child 
+                            border-radius: 4px
+                    
+                        label:nth-child(2) 
+                            padding-left: 10px
+                    
+                        label:nth-child(1+n) 
+                            margin-left: 35px
+                    
+                        input:checked ~ label 
+                            background-color: #f2f7f8
+                    
+                        input:checked ~ label:after 
+                            border-left-color: #f2f7f8
+            
+                        input:checked + label 
+                            background-color: #ffa807
+                    
+                        input:checked + label:after 
+                            border-left-color: #ffa807
+                        
+                        label:after 
+                            content: ''
+                            width: 0
+                            height: 0
+                            display: block
+                            position: absolute
+                            top: 0
+                            left: 85%
+                            border-top: 14px solid transparent
+                            border-left-width: 20px
+                            border-left-style: solid
+                            border-bottom: 14px solid transparent
+                            z-index: 1
+                    
+                    #slider
+                .bars2
+                    width: 40%
+                    float: left
+                    .stars
+                        margin: 0 auto
+                        width: 92px
+                        input  
+                            display: none
+                        label
+                            display: block
+                            float: left
+                            width: 17px
+                            height: 16px
+                            // background-image: url('../assets/img/star2.png')
+                        input + label
+                            background-image: url('../assets/img/star.png')
+                        input:checked ~ label
+                            background-image: url('../assets/img/star2.png')         
+    &:after
+        content: ""
+        display: block
+        clear: both    
+    
+.column>div 
+    font-size: 14px
+    column-count: 3
+    column-gap: 40px
+    text-align: justify
+    span  
+        color: #ffc28c
+        display: block
+        border-left: 2px solid #ffc28c
+        padding-left: 10px
+    .blockquote
+        padding: 10px 20px
+        position: relative
+        &:before
+            content: "“"
+            font-size: 44px
+            color: #cfcfcf
+            line-height: 20px
+            position: absolute
+            top: 0
+            left: 0
+        &:after
+            content: "”"
+            font-size: 44px
+            color: #cfcfcf
+            line-height: 20px
+            position: absolute
+            bottom: 0
+            right: 0
+        p  
+            color: #c2c2c2
+            padding: 0 20px
+    a  
+        color: #ffc28c
+        float: right
+        text-decoration: underline    
+footer
+    width: 71%
+    border-top: 1px solid #cfcfcf
+    margin: 0 auto
+    margin-top: 50px
+    padding: 20px 0
+    img  
+        display: block
+        float: left
+    .copyright
+        float: right
+        p  
+            display: block
+            float: right
+            span
+                color: #cfcfcf
+        p:last-child
+            font-size: 31px
+//ALWAYS END
+@import "media"
